@@ -1,0 +1,30 @@
+body
+{
+	/*background: #FF0000;*/
+	background:  tomato;
+	/*background: rgb(155,40,33);
+	background: rgba(155,40,33,1);*/
+	color: white;
+}
+header
+{
+	border: 1px solid black;
+	text-align: center;
+}
+header nav ul li/*lo que afecta es lo que esta a la derecha*/
+{
+	background: pink;
+	border: 1px solid white;
+	border-radius: 5px;
+	/* li: Block 100% del ancho de la pantalla*/
+	display: inline-block;/*quitas el block para que no abarque el 100% de la pantalla*/
+	width: 100px;
+}
+header nav ul li:hover
+{
+	background: gray;
+	border: 1px solid pink;
+	border-radius: 5px;
+	display: inline-block;
+	width: 100px;
+}
