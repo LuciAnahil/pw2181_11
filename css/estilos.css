@@ -6,6 +6,17 @@ body
 	background: rgba(155,40,33,1);*/
 	color: white;
 }
+main
+{
+	margin-top: 15px;
+}
+footer
+{
+	border: 1px solid blue;
+	font-weight: bold;/*negritas*/
+	padding: 20px;
+	text-align: center;
+}
 header
 {
 	border: 1px solid black;
@@ -18,6 +29,9 @@ header nav ul li/*lo que afecta es lo que esta a la derecha*/
 	border-radius: 5px;
 	/* li: Block 100% del ancho de la pantalla*/
 	display: inline-block;/*quitas el block para que no abarque el 100% de la pantalla*/
+	/*margin-right: 15px;*/ 
+	margin: 0px 15px 0px 0px;/*:arriba derecha abajo izqierda*/
+	padding: 5px 10px;
 	width: 100px;
 }
 header nav ul li:hover
@@ -26,5 +40,13 @@ header nav ul li:hover
 	border: 1px solid pink;
 	border-radius: 5px;
 	display: inline-block;
+	padding: 5px 10px;
 	width: 100px;
+}
+main section article
+{
+	border: 1px dashed blue;
+	display: inline-block;
+	vertical-align: top;
+	width: 32.5%;
 }
