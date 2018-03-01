@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Práctica 01 CSS3</title>
+	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 	<header>
 		<img src="img/resplandor.png" alt="">
-		<img src="img/logo.png" alt="">
+		<img src="img/logo.png" id="logo" alt=""><!--El id es unico-->
 		<nav>
 			<ul>
 				<li>Inicio</li>
@@ -23,16 +24,16 @@
 			</form>
 		</nav>
 	</header>
-	<section>
+	<section id="seccion01" >
 		<article>
 			<img src="img/slide2.jpg" alt="">
 		</article>
 	</section>
-	<section>
+	<section id="seccion02" >
 		<article>
 			<img src="img/separador.jpg" alt="">
 			<br>
-			Una sección
+			<span class="unaSeccion">Una sección</span><!--class se puede utilizar mas de una vez--> 
 			<br>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores alias, enim accusantium, molestias, officiis voluptatibus maiores et similique, libero repellat possimus esse neque! Vero quidem, pariatur sint accusamus sapiente perspiciatis.
 			<p></p>
@@ -41,7 +42,7 @@
 		<article>
 			<img src="img/separador.jpg" alt="">
 			<br>
-			Otra sección
+			<span class="otraSeccion">Otra sección</span>
 			<br>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur unde quibusdam error fuga perspiciatis, harum mollitia ab vel in! Adipisci dolores voluptas dicta sed cumque pariatur possimus omnis officia.
 			<br>
@@ -52,7 +53,7 @@
 		<article>
 			<img src="img/separador.jpg" alt="">
 			<br>
-			Un vídeo
+			<span class="otraSeccion">Un vídeo</span>
 			<br>
 			<img src="img/video.jpg" alt="">
 		</article>

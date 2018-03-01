@@ -1,0 +1,7 @@
+body
+{
+	border:1px solid blue;
+	font-size:  16px;/*16px=1em:tamaño normal o minimo de letra*//*font-size: Mantien el formato de la letra en cualquier navegador*/ 
+	margin: 0 auto;/*auto: centra la caja automaticamente*/
+	max-width: 1024px;/*Tamaño del body*/
+}
