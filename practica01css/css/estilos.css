@@ -8,10 +8,12 @@ body
 header
 {
 	background: #b3d0e0;
+	margin-bottom: 15px;
 }
 header form
 {
 	float: right;
+	margin-bottom: 15px;
 	margin-right: 20px;
 	margin-top: -40px;
 }
@@ -42,4 +44,17 @@ header nav ul li
 #logo/*lamar id*/
 {
 	margin-top: -150px;
+}
+#seccion01
+{
+	margin-top: 15px;
+}
+#seccion01 article 
+{
+	text-align: center; 
+}
+#seccion01 article img
+{
+	border: 5px solid rgba(15,150,150,0.4);
+	width:  98%;
 }
