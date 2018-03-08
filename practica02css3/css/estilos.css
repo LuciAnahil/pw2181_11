@@ -1,0 +1,33 @@
+body
+{
+	font-size: 16px; /*1em*/
+	margin: 0 auto;
+	min-width: 1078px;
+	max-width: 1078px;
+}
+header input
+{
+	float:right;
+	margin-top: 15px;
+	margin-right: -200px;
+	position: relative;/*toma la posicion de la caja y no el de los margenes*/
+}
+header nav ul li
+{
+	border-bottom:  1px solid gray;
+	color: gray;
+	display: inline-block;
+	font-size: 1.8em;
+	margin-right: 15px;
+	padding-bottom: 2px;
+	/*text-decoration:underline; subrayado de texto*/
+}
+#granthams
+{
+	margin-top: 25px;
+	margin-left: 25px;
+}
+#paint
+{
+	float: right;
+
