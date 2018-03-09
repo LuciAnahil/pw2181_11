@@ -5,6 +5,12 @@ body
 	min-width: 1078px;
 	max-width: 1078px;
 }
+header nav
+{
+	margin-left: 220px;
+	/*No funciona por la mancha de pintura
+	text-align: center;*/
+}
 header input
 {
 	float:right;
@@ -14,13 +20,19 @@ header input
 }
 header nav ul li
 {
-	border-bottom:  1px solid gray;
-	color: gray;
+	border-bottom:  1px solid #B4B4B5;
+	color: #B4B4B5;
 	display: inline-block;
 	font-size: 1.8em;
 	margin-right: 15px;
 	padding-bottom: 2px;
 	/*text-decoration:underline; subrayado de texto*/
+}
+#bgoffer
+{
+	left: -35px;
+	position: relative;
+	top: -410px;
 }
 #granthams
 {
@@ -30,4 +42,57 @@ header nav ul li
 #paint
 {
 	float: right;
-
+}
+#primerseccion
+{
+	/*Tamaño de la imagen*/
+	height: 318px;
+	margin-top: 60px;
+}
+#primerseccion article
+{
+	display: inline-block;
+	vertical-align: top;
+}
+#secc01art01
+{
+	margin-left: 30px;
+	width: 60%;
+}
+#secc01art02
+{
+	margin-left: 50px;
+	width: 30%;
+}
+#secc01art02 ul
+{
+	/*Quitamos viñetas (bullets)*/
+	list-style: none;
+}
+#secc01art02 ul li:before
+{
+	/*Volvemos a crear las viñetas (bullets)*/
+	content: "• ";
+	color: #F7C6DC;
+}
+#segundaseccion article
+{
+	padding-right: 122px;
+	text-align: right;
+}
+.colorrosa
+{
+	color:#FF0099;
+}
+.letramediana
+{
+	font-size: 2em;
+}
+.letragrande
+{
+	font-size: 3.5em;
+}
+.nito
+{
+	font-weight: bold;
+}
