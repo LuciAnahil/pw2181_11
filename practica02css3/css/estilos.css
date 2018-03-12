@@ -80,17 +80,61 @@ header nav ul li
 	padding-right: 122px;
 	text-align: right;
 }
+#terceraseccion article
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 23%; /*100/4articles*/
+}
+#terceraseccion article input[type="email"]
+{
+	border-radius: 5px;
+}
+#terceraseccion article input[type="button"]
+{
+	background: #80af00;
+	border:#80af00;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+}
+#terceraseccion article img
+{
+	/*Alineaión vertical del texto*/
+	vertical-align: middle;
+}
+#secc03art04
+{
+	padding-left: 25px;
+	padding-top: 50px;
+}
+.colorazul
+{
+	color:#6da1d7;
+}
 .colorrosa
 {
 	color:#FF0099;
+}
+.colorverde
+{
+	color:#91c81d;
+}
+.letracomun
+{
+	font-size: 1.2em;
+}
+.letragrande
+{
+	font-size: 3.5em;
 }
 .letramediana
 {
 	font-size: 2em;
 }
-.letragrande
+.letrastay
 {
-	font-size: 3.5em;
+	font-size: 1.5em;
 }
 .nito
 {
