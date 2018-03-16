@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Audio y video</title>
+	<link rel="stylesheet" href="css/audiovideo.css">
+</head>
+<body>
+	Etiquetas para audio y video <br>
+	<!--<audio src=""></audio> sintaxis no correcta SOLO ACEPTA UN TIPO DE AUDIO-->
+	<audio controls autoplay loop> <!--loop se repita una y otra vez-->
+		<source src="audiovideo/media/audio/musica.mp3" type="">
+	</audio>
+	<video controls autoplay loop preload><!--preload para que se vaya cargando-->
+		<source src="audiovideo/media/video/Chrome_ImF.mp4">
+		<source src="audiovideo/media/video/Chrome_ImF.ogv">
+		<source src="audiovideo/media/video/Chrome_ImF.webm">	
+	</video>
+	<video controls autoplay>
+		<source src="audiovideo/media/video/html5.mp4">
+		<source src="audiovideo/media/video/html5.webm">
+	</video>
+</body>
+</html>
