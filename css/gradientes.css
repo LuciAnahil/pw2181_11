@@ -1,0 +1,84 @@
+article
+{
+	border: 1px solid blue; 
+	border-radius: 5px;
+	height: 50PX;
+	margin-top: 10px;
+	width: 150px;
+}
+#uno
+{
+	/*si no soporta gradientes se le pone un color de fondo*/
+	background: red;
+	/*Opera*/
+	background: -o-linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1));
+	/*Safari*/
+	background: -webkit-linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1));
+	/*Mozilla Firefox*/
+	background: -moz-linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1));
+	/*Edge - Internet Explorer*/
+	background: -ms-linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1));
+	/*Para todos los navegadores*/
+	background: linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1));
+}
+#dos
+{
+	/*si no soporta gradientes se le pone un color de fondo*/
+	background: red;
+	/*Opera*/
+	background: -o-linear-gradient(to left, red, yellow));
+	/*Safari*/
+	background: -webkit-linear-gradient(to left, red, yellow);
+	/*Mozilla Firefox*/
+	background: -moz-linear-gradient(to left, red, yellow);
+	/*Edge - Internet Explorer*/
+	background: -ms-linear-gradient(to left, red, yellow);
+	/*Para todos los navegadores*/
+	background: linear-gradient(to left, red, yellow);
+}
+#tres
+{
+	/*si no soporta gradientes se le pone un color de fondo*/
+	background: red;
+	/*Opera*/
+	background: -o-linear-gradient(to right, red, yellow);
+	/*Safari*/
+	background: -webkit-linear-gradient(to right, red, yellow);
+	/*Mozilla Firefox*/
+	background: -moz-linear-gradient(to right, red, yellow);
+	/*Edge - Internet Explorer*/
+	background: -ms-linear-gradient(to right, red, yellow);
+	/*Para todos los navegadores*/
+	background: linear-gradient(to right, red, yellow);
+}
+#cuatro
+{
+	/*si no soporta gradientes se le pone un color de fondo*/
+	background: red;
+	/*Opera*/
+	background: -o-linear-gradient(to right bottom, red, yellow);
+	/*Safari*/
+	background: -webkit-linear-gradient(to right bottom, red, yellow);
+	/*Mozilla Firefox*/
+	background: -moz-linear-gradient(to right bottom, red, yellow);
+	/*Edge - Internet Explorer*/
+	background: -ms-linear-gradient(to right bottom, red, yellow);
+	/*Para todos los navegadores*/
+	background: linear-gradient(to right bottom, red, yellow);
+}
+#cinco
+{
+	/*si no soporta gradientes se le pone un color de fondo*/
+	background: red;
+	/*Opera*/
+	background: -o-linear-gradient(to left bottom, red, yellow));
+	/*Safari*/
+	background: -webkit-linear-gradient(to left bottom, red, yellow);
+	/*Mozilla Firefox*/
+	background: -moz-linear-gradient(to left bottom, red, yellow);
+	/*Edge - Internet Explorer*/
+	background: -ms-linear-gradient(to left bottom, red, yellow);
+	/*Para todos los navegadores*/
+	background: linear-gradient(to left bottom, red, yellow);
+}
+
