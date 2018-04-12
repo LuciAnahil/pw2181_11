@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo de localStorage/sessionStorage</title>
+</head>
+<body>
+	<div id="demo">0</div>
+	<button onclick="aumentar();">Contador</button> <p>
+	<button onclick="reiniciar();">Reinicia</button> <p>
+	<button onclick="eliminar();">Elimina contador</button>
+	<!--<script>Codigo</script>-->
+	<script>
+
+		var imprime = function(dato)
+		{
+			document.getElementById('demo').innerHTML = dato;
+		}
+		var aumentar = function()
+		{
+			localStorage.cuenta++;
+			imprime(localStorage.cuenta);
+		}
+		var reiniciar = function()
+		{
+			localStorage.cuenta = 0;
+			imprime(localStorage.cuenta);
+		}
+		var eliminar = function()
+		{
+			localStorage.removeItem("cuenta");
+			imprime(localStorage.cuenta)
+		}
+		if(typeof(Storage)!= "undefined")
+		{
+			//Si el navegador puede utilizar local-session Storage.
+			if(localStorage.cuenta)//Existe
+			{
+				imprime(localStorage.cuenta);
+			}
+			else
+			{
+				localStorage.cuenta = 0;
+			}
+			
+		}
+	</script>
+</body>
+</html>
