@@ -1,0 +1,120 @@
+body
+{
+	font-size: 16px;
+	margin:0 auto;
+	min-width: 1024px;
+	max-width: 1024px;
+}
+#aditii
+{
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 15%
+}
+header
+{
+	width: 99%;
+}
+header input
+{
+	margin-left: 70px;
+	width: 500px;
+}
+#canasta
+{
+	margin-left: 100px;
+}
+.colorgris
+{
+	color: #999999;
+}
+.nito
+{
+	font-weight: bold;
+}
+.letragrande
+{
+	font-size: 1.5em;
+}
+header nav
+{
+	background: #3dc4b6fa;
+}
+header nav ul li
+{
+	border-right: 3px solid white;
+	display: inline-block;
+	color: white;
+	font-weight: bold;
+	margin: 15px 3px;
+	text-align: center;
+}
+#primerseccion
+{
+	background: #3dc4b6fa;
+	margin-top: -20px;
+	width: 99%;
+}
+#primerseccion article
+{
+	background: #3dc4b6fa; 
+	display: inline-block;
+	
+}
+#secc01art01
+{
+	width: 38%;
+}
+#primerseccion input
+{
+	background: #3dc4b6fa;
+	border: 2px solid white;
+	color: white;
+	font-size: 1.3em;
+}
+#playera
+{
+	width: 90%;
+}
+#secc01art02 
+{
+	padding-bottom: 80px;
+	width: 	58%;
+}
+.letragigante
+{
+	font-size: 2.5em;
+}
+.colorblanco
+{
+	color: white;
+}
+#segundaseccion
+{
+	width: 99%;
+}
+#segundaseccion article
+{
+	display: inline-block;
+	margin: 15px 8px;
+	width: 23%;
+	text-align: center;
+}
+#playerita
+{
+	width: 60%;
+}
+#tenis
+{
+	width: 60%;
+}
+#bolsa
+{
+	width: 60%;
+}
+#segundaseccion input
+{
+	background: #3dc4b6fa;
+	border: #3dc4b6fa;
+	color: white;
+}
