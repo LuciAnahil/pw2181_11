@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>WebWorkers HTML5</title>
+</head>
+<body>
+	<!-- WEBWORKERS: Trabajan internamente con la computadora no se conecta a la red corren independientemente sin afectar la pagina-->
+  	<p>Contar números: <div id="resultado"></div></p>
+  	<button onclick="iniciarWorker();">Iniciar</button>
+  	<button onclick="pararWorker();">Detener</button>
+  	<p>Contar números 2: <div id="resultado2"></div></p>
+  	<button onclick="iniciarWorker2();">Iniciar</button>
+  	<button onclick="pararWorker2();">Detener</button>
+  	<p>Contar números 3: <div id="resultado3"></div></p>
+  	<button onclick="iniciarWorker3();">Iniciar</button>
+  	<button onclick="pararWorker3();">Detener</button>
+  	<script>
+  		var w1,w2,w3;
+  		function iniciarWorker()
+  		{
+  			if(typeof(w1)== "undefined")
+  			{
+  				w1=new Worker("demoWorker.js");
+  				w1.onmessage = function(event)
+  				{
+  					document.getElementById("resultado").innerHTML=event.data;
+  				}  	
+  			}
+  			else
+  			{
+  				alert("El navegador no soporta WebWorkers")
+  			}
+  		}
+  		function pararWorker()
+		{
+			w1.terminate();
+			w1=undefined;
+		}
+		function iniciarWorker2()
+  		{
+  			if(typeof(w2)== "undefined")
+  			{
+  				w2=new Worker("demoWorker.js");
+  				w2.onmessage = function(event)
+  				{
+  					document.getElementById("resultado2").innerHTML=event.data;
+  				}  	
+  			}
+  			else
+  			{
+  				alert("El navegador no soporta WebWorkers")
+  			}
+  		}
+  		function pararWorker2()
+		{
+			w2.terminate();
+			w2=undefined;
+		}
+		function iniciarWorker3()
+  		{
+  			if(typeof(w3)== "undefined")
+  			{
+  				w3=new Worker("demoWorker.js");
+  				w3.onmessage = function(event)
+  				{
+  					document.getElementById("resultado3").innerHTML=event.data;
+  				}  	
+  			}
+  			else
+  			{
+  				alert("El navegador no soporta WebWorkers")
+  			}
+  		}
+  		function pararWorker3()
+		{
+			w3.terminate();
+			w3=undefined;
+		}
+  	</script> 
+	
+</body>
+</html>
