@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrastrar y soltar</title>
+	<style>
+		#div1,#div2
+		{
+			float: left;
+			border: 1px solid black;
+			height: 170px;
+			margin: 10px;
+			padding: 10px;
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Arrastrar y soltar</h2>
+	<div id="div1" ondragover="allowDrop(event)" ondrop="drop(event)">
+		<img src="hoja.png" id="arrastre1" height="45" width="65" draggable="true" ondragstart="drag(event)">
+		<img src="cerdito.png" id="arrastre2" height="45" width="65" draggable="true" ondragstart="drag(event)">
+	</div>
+	<div id="div2" ondragover="allowDrop(event)" ondrop="drop(event)">
+	</div>
+	<script>
+		function allowDrop(ev)
+		{
+			//Permite que el objeto caiga sobre el
+			ev.preventDefault();
+		}
+		function drag(ev)
+		{
+			//Aqui guardamos en el contenedor
+			ev.dataTransfer.setData("text",ev.target.id);
+		}
+		function drop(ev)
+		{
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+	</script>
+</body>
+</html>
