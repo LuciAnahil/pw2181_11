@@ -17,6 +17,7 @@ function muestraPantallaPrincipal()
 		protocol: 'file',
 		slashes: true
 	}));
+	PantallaPrincipal.webContents.openDevTools();
 	//Mostramos la pantalla
 	PantallaPrincipal.show();
 }
