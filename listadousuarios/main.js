@@ -49,7 +49,7 @@ function muestraPantallaPrincipal()
 			protocol: 'file',
 			slashes: true //Que tome en cuenta las diagonales
 	}))
-	pantallaPrincipal.webContents.openDevTools(); //Inspector de elementos para cuando algo no funciona
+	//pantallaPrincipal.webContents.openDevTools(); //Inspector de elementos para cuando algo no funciona
 	pantallaPrincipal.show();//Mostrar pantalla
 }
 
