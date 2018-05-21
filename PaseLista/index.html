@@ -7,6 +7,7 @@
 		body
 		{
 			font-size: 16px;
+			text-align: center;
 		}
 		.letramediana
 		{
@@ -19,14 +20,19 @@
 	</style>
 </head>
 <body>
-	<span class="letramediana">Usuario:</span>
-	<br>
-	<input type="text" id="usuario" class="mediano">
-	<br>
-	<span class="letramediana">Contraseña:</span>
-	<br>
-	<input type="password" id="contraseña" class="mediano">
-	<br>
-	<button class="nito">Entrar</button>
+	<form method="post" action="index.js">
+		<span class="letramediana">Usuario:</span>
+		<br>
+		<input type="text" id="txtUsuario" name="usuario" class="mediano">
+		<p>
+		<span class="letramediana">Contraseña:</span>
+		<br>
+		<input type="password" id="txtContraseña" name="contraseña" class="mediano">
+		<p>
+		<button id="btnEnviar" class="nito">Enviar</button>
+	</form>
+	<script>
+		require('./index.js');
+	</script>
 </body>
 </html>
