@@ -1,0 +1,13 @@
+body
+{
+	background: #BBBBBB;
+	font-size: 16px;
+	margin: 0 auto;
+	max-width: 1024px;
+}
+#secInicio
+{
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 350px;
+}
