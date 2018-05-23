@@ -1,6 +1,6 @@
 <?php
 include 'conexiones.php';
-fuction valida()
+function valida()
 {
 	$respuesta = false;
 	$usuario = $_POST["usuario"];

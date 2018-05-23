@@ -3,8 +3,8 @@ var inicioApp = function()
 	var Aceptar = function()
 	{
 		event.preventDefault();
-		var usuario =$("txtUsuario").val();
-		var clave =$("txtClave").val();
+		var usuario =$("#txtUsuario").val();
+		var clave =$("#txtClave").val();
 		var parametros = "opc=validaentrada"+
 						 "&usuario="+usuario+
 						 "&clave="+clave+
@@ -19,7 +19,8 @@ var inicioApp = function()
 			{
 				if(response.respuesta == true)
 				{
-					alert("Bienvenido");
+					$("#secInicio").hide("slow");
+					//alert("Bienvenido");
 				}
 				else
 				{
@@ -32,6 +33,6 @@ var inicioApp = function()
 			}
 		});
 	}
-	$("btnAceptar").on("click",Aceptar);
+	$("#btnAceptar").on("click",Aceptar);
 }
 $(document).ready(inicioApp);
