@@ -1,12 +1,32 @@
-const {app,BrowserWindow} =  require('electron') 
-const path = require('path')
-const url = require('url')
+const {app,BrowserWindow} =  require('electron') // Es igual que poner app = require('electron').app y BrowserWindow = require('electron').BrowserWindow
+const path = require('path') //Ruta del sistema de archivos
+const url = require('url')//url de las paguinas que vamos a cargar
 
-let pantallaPrincipal;
+let pantallaPrincipal;//Definir pantalla principal, despues de que toma un valor no puede cambiar
 
-/*global.infoAlumnos = {
-	
-}*/
+/*global.infoUsuarios = {
+	nombre: '',
+	genero: '',
+	foto: '',
+	direccion: '',
+	telefono: ''
+}
+ipc.on('print-to-PDF',function(event){
+	const PDFPath = path.join(os.tmpdir(),'print.pdf')
+	const win = BrowserWindow.fromWebContents(event.sender)
+	win.webContents.printToPDF({},function(error,data){
+		if(error) throw error
+		fs.writeFile(PDFPath,data,function(error){
+			if(error)
+			{
+				throw error
+			}
+			shell.openExternal('file://'+PDFPath)
+			win.close();
+
+		}) 
+	})
+})*/
 
 function muestraPantallaPrincipal()
  {//Creacion de la primera pantalla
@@ -17,8 +37,8 @@ function muestraPantallaPrincipal()
 			protocol: 'file',
 			slashes: true //Que tome en cuenta las diagonales
 	}))
-	pantallaPrincipal.webContents.openDevTools(); //Inspector de elementos para cuando algo no funciona
+	//pantallaPrincipal.webContents.openDevTools(); //Inspector de elementos para cuando algo no funciona
 	pantallaPrincipal.show();//Mostrar pantalla
 }
 
-app.on('ready',muestraPantallaPrincipal)
+app.on('ready',muestraPantallaPrincipal)//Inicializar la aplicacion y ya que este listo se muestra la pantalla princippal con la funcion de arrriba.

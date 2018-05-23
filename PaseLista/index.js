@@ -19,20 +19,19 @@ function botonEnviar()
 		dataType: 'json',
 		success: function(data)
 		{
-			usuario = document.index.html.#txtUsuario.value;
+			usuario = document.getElementById("#txtContraseña");
 			contraseña = document.getElementById("#txtContraseña");
 			alert(usuario);
 			alert(contraseña);
 			//alert(#txtUsuario);
 			//alert(#txtContraseña);
-			//if(usuario == "920" contraseña == "12345678")
+			if("respuesta" == true)
 			{
-				usuarioValida  = data.usuariovalida;
 				periodo = data.periodoactual;
+				alert("Inicio Correcto");
 			}
-			//	alert("Inicio Correcto");
-			//else
-			//	alert("Usuario o Contraseña incorrectos")
+			else
+				alert("Usuario o Contraseña incorrectos")
 		} 
 	});
 }
