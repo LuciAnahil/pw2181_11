@@ -4,30 +4,6 @@ const url = require('url')//url de las paguinas que vamos a cargar
 
 let pantallaPrincipal;//Definir pantalla principal, despues de que toma un valor no puede cambiar
 
-/*global.infoUsuarios = {
-	nombre: '',
-	genero: '',
-	foto: '',
-	direccion: '',
-	telefono: ''
-}
-ipc.on('print-to-PDF',function(event){
-	const PDFPath = path.join(os.tmpdir(),'print.pdf')
-	const win = BrowserWindow.fromWebContents(event.sender)
-	win.webContents.printToPDF({},function(error,data){
-		if(error) throw error
-		fs.writeFile(PDFPath,data,function(error){
-			if(error)
-			{
-				throw error
-			}
-			shell.openExternal('file://'+PDFPath)
-			win.close();
-
-		}) 
-	})
-})*/
-
 function muestraPantallaPrincipal()
  {//Creacion de la primera pantalla
 	pantallaPrincipal = new BrowserWindow({width:320,height:425});

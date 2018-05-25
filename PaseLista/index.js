@@ -12,23 +12,31 @@ function botonEnviar()
 	var usuario = "";
 	var periodo = "";
 	var contraseña = "";
-	var usuarioValida = "";
-
+	
+	event.preventDefault();
+			usuario = $("#txtUsuario").val();
+			contraseña = $("#txtContraseña").val();
 	$.ajax({
-		url:'http://itculiacan.edu.mx/dadm/apipaselista/data/validausuario.php?usuario=920&clave=12345678', 
+		url:'https://itculiacan.edu.mx/dadm/apipaselista/data/validausuario.php?usuario='+usuario+'&clave='+contraseña, 
 		dataType: 'json',
+		type: 'post',
 		success: function(data)
 		{
-			usuario = document.getElementById("#txtContraseña");
-			contraseña = document.getElementById("#txtContraseña");
-			alert(usuario);
-			alert(contraseña);
-			//alert(#txtUsuario);
-			//alert(#txtContraseña);
-			if("respuesta" == true)
+			if(data.respuesta == true)
 			{
 				periodo = data.periodoactual;
 				alert("Inicio Correcto");
+				pantallaGrupos = new BrowserWindow({width:320,height:425});
+				pantallaGrupos.loadURL(url.format({
+				pathname: path.join(__dirname,'Grupo de maestros.html'),
+				protocol: 'file',
+				slashes: true
+	}));
+	//pantallaDetalle.webContents.openDevTools();
+	pantallaGrupos.show();//Mostrar pantalla
+	$("#txtContraseña").val("");
+	$("#txtUsuario").val("");
+
 			}
 			else
 				alert("Usuario o Contraseña incorrectos")
@@ -36,4 +44,4 @@ function botonEnviar()
 	});
 }
 
-$("body").on("click","button",botonEnviar);
+$("#btnEnviar").on("click",botonEnviar);

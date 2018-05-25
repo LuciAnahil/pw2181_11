@@ -54,4 +54,5 @@ function muestraPantallaPrincipal()
 }
 
 app.on('ready',muestraPantallaPrincipal)//Inicializar la aplicacion y ya que este listo se muestra la pantalla principal con la funcion de arriba
+// href - hipervinculo
 

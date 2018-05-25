@@ -6,7 +6,6 @@ const url = require('url')
 
 let GrupoMaestros;
 /*var Grupo = new Array(20);
-
 function datos(nombre,genero,foto,direccion,telefono)
 {
 	this.nombre = nombre;
@@ -24,17 +23,16 @@ function inicia()
 	var claveGrupo = "";
 
 	$.ajax({
-		url:'', 
+		url:'http://itculiacan.edu.mx/dadm/apipaselista/data/obtienegrupos2.php?usuario=920&usuariovalida=49nc8Eznl4dnU&periodoactual=2181', 
 		dataType: 'json',
 		success: function(data)
 		{
 			for(var i=0;i<3;i++)
 			{
-				claveMateria = data.results[i].  ;
-				nombreMateria = data.results[i].  ;	
-				claveGrupo = data.results[i].   ;
-						
-				$("#lstGrupos").html(claveMateria,claveGrupo,nombreMateria);
+				claveMateria = data.grupos[i].clavemateria;
+				nombreMateria = data.grupos[i].materia;	
+				claveGrupo = data.grupos[i].grupo;		
+				$("#lstGrupos").html(¨"Calve de la materia: "+claveMateria+", Clave del grupo: "+claveGrupo+"Nombre de la materia: "+nombreMateria);
 			}
 		} 
 	});
@@ -49,7 +47,6 @@ function inicia()
 	require('electron').remote.getGlobal('infoUsuarios').foto=usuarios[this.id].foto;
 	require('electron').remote.getGlobal('infoUsuarios').direccion=usuarios[this.id].direccion;
 	require('electron').remote.getGlobal('infoUsuarios').telefono=usuarios[this.id].telefono;
-
 	pantallaDetalle = new BrowserWindow({width:320,height:425});
 	pantallaDetalle.loadURL(url.format({
 		pathname: path.join(__dirname,'detalleUsuarios.html'),
