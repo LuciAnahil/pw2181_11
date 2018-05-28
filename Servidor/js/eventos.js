@@ -19,6 +19,7 @@ var inicioApp = function()
 			{
 				if(response.respuesta == true)
 				{
+
 					$("#secInicio").hide("slow");
 					$("#frmUsuarios").show("slow");
 					//alert("Bienvenido");
@@ -53,17 +54,18 @@ var inicioApp = function()
 				success:function(response){
 					if(response.respuesta == true)
 					{
-						$("#txtNombreUsuario").val(response.nombre);
+						$("#txtNombre").val(response.nombre);
 						$("#txtClaveUsuario").val(response.clave);
 					}
 					else
 					{
 						$("#txtNombre").focus();
+						$("#txtNombre").val("");
+						$("#txtClaveUsuario").val("");
 					}
 
 				},
-				error:function(xhr,ajaxOptions,thrownError)
-				{
+				error:function(xhr,ajaxOptions,thrownError){
 				}	
 			});
 		}
@@ -75,8 +77,48 @@ var inicioApp = function()
 			buscaUsuario();
 		}
 	}
+	var Guardar = function(){
+		var usuario =$("#txtNombreUsuario").val();
+		var nombre =$("#txtNombre").val();
+		var clave =$("#txtClaveUsuario").val();
+		var parametros = "opc=guardarusuario"
+						 "&usuario="+usuario+
+						 "&nombre="+nombre+
+						 "&clave="+clave+
+						 "&aleatorio="+Math.random();
+		if(usuario != "" && nombre!= "" && clave != "")
+		{
+			$.ajax({
+				cache:false,
+				type:"POST",
+				dataType:"json",
+				url:"php/guardarusuarios.php",
+				data: parametros,
+				success:function(response){
+					if(response.respuesta == true)
+					{
+						alert("Cambios guardados con exito")
+						$("#frmUsuarios > input").val("");
+						$("#txtNombreUsuario").focus();
+					}
+					else
+					{
+						alert("Ocurrio un error, intente mas tarde");
+					}
+
+				},
+				error:function(xhr,ajaxOptions,thrownError){
+				}	
+			});
+		}
+		else
+		{
+			alert("Llene todos los campos");
+		}
+	}
 	$("#btnAceptar").on("click",Aceptar);
 	$("#txtNombreUsuario").on("keypress",teclaNombreUsuario);
-	$("#frmUsuarios").hide();
+	$("#btnGuardar").on("click",Guardar);
+	$("#frmUsuarios").hide();///Necesario PL
 }
 $(document).ready(inicioApp);
